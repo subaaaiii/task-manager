@@ -8,6 +8,7 @@ type TaskRequest struct {
 	Status      string    `json:"status" binding:"required,oneof=todo inprogress done"`
 	DueDate     time.Time `json:"due_date" binding:"required"`
 } title dan status diatur sebagai required sementara description tidak dan due date si set sebagai time agar sistem dapat menyimpan tanggal dengan baik.
+
 3. endpoint diatur pada file route dengan endpoint yang sama yaitu api/task , hanya dibedakan metho nya sesuai dengan fungsi yang menangani nya di controller antara lain
 get - tanpa id : digunakan untuk fetch semua data task yg ada
 get/:id : digunakan untuk fetch task tertentu berdasarkan id
